@@ -1,0 +1,11 @@
+En todas las páginas del sitio se mejoraron las técnicas SEO:
+- Se actualizaron los títulos (Hard Duty - [página])
+- Se agregaron palabras clave acordes a cada página
+- Se agregó una etiqueta de descripción acorde a cada página
+- Se ordenaron los encabezados según importancia
+- Se redujo el ancho mínimo de la página a 280px
+- Se agregó una página de error 404 con redirección al sitio
+- Se limpió el código y se cambiaron variables camelCase a kebab-case
+- Se comprimieron todas las imágenes con doble compresión
+- Se agregaron atributos "alt" a todas las imágenes
+- Se eliminaron imágenes en desuso

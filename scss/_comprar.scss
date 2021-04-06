@@ -1,0 +1,101 @@
+/* comprar */
+.product-choice{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 4em;
+}
+.product{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: $white;
+    transition: all ease 0.5s;
+    height: fit-content;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.product:hover, .extra:hover{
+    transform: scale(1.05);
+}
+.product:hover .form-check-input, .extra:hover .form-check-input{
+    transform: scale(2);
+    margin-right: 0.5em;
+}
+.product__img{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 20em;
+    height: 10em;
+}
+.form-check-input{
+    background-color: $white;
+    transition: all ease 0.5s;
+    transform: scale(2);
+    margin-right: 1em;
+    border: none;
+    cursor: pointer;
+}
+.form-check-input:checked{
+    background-color: $black;
+}
+.extra-choice{
+    margin-top: 1em;
+    margin-bottom: 7em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+.extra{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: $white;
+    width: 15em;
+    margin: 1em;
+    transition: all ease 0.5s;
+}
+.extra__img{
+    display: flex;
+    height: 10em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#button-box{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 10em;
+}
+.btn{
+    font-size: 1.5em;
+    width: 100%;
+    transition: all ease 0.3s;
+    span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+}
+.btn span::after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.btn:hover span{
+    padding-right: 25px;
+}
+.btn:hover span::after{
+    opacity: 1;
+    right: 0;
+}
+.btn:hover{
+    background-color: $primary;
+}

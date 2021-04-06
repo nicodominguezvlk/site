@@ -1,0 +1,345 @@
+/* Imports */
+@import "colors";
+@import "index";
+@import "desc";
+@import "vehiculos";
+@import "comprar";
+@import "contacto";
+@mixin font($family, $weight){
+    font-family: $family;
+    font-weight: $weight;
+}
+
+/* Inicialización */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+/* General */
+body{
+    background: linear-gradient($secondary, $black);
+    overflow-x: hidden;
+    font-family: 'Montserrat';
+    color: $white;
+    font-size: 16px;
+}
+a, a:hover{
+    color: $white;
+    text-decoration: none;
+}
+h1{
+    @include font(Orbitron, 900);
+    font-size: 5em;
+    color: white;
+    margin-bottom: 0.125em;
+    text-align: center;
+}
+h2{
+    @include font(Orbitron, 900);
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+h3{
+    @include font(Orbitron, 500);
+    text-align: center;
+    font-size: 2em;
+    color: $white;
+}
+h4{
+    @include font(Orbitron, 500);
+    text-align: center;
+    font-size: 1.5em;
+    color: $white;
+}
+h6{
+    @include font(Orbitron, 900);
+    font-size: 1.75em;
+    display: flex;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 0;
+    a{
+        text-decoration: none;
+        color: $secondary;
+        transition: all ease 0.2s;
+    }
+    a:hover{
+        color: $white;
+    }
+}
+.shortP{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: $white;
+}
+.longP{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85em;
+    color: $white;
+}
+.description-text{
+    height: auto;
+    margin: 3%;
+    text-align: center;
+    vertical-align: middle;
+}
+header{
+    background-color: $primary;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding-right: 1em;
+    padding-left: 0.25em;
+}
+#links{
+    display: none;
+    grid-row: 2;
+    margin-bottom: 0;
+}
+#menu{
+    height: 100%;
+    width: 3.5em;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#menu-icon div{
+    width: 2em;
+    height: 0.25em;
+    background-color: $secondary;
+    margin: 0.2em;
+    transition: all ease 0.3s;
+}
+#menu:hover{
+    div{
+        div{
+            background-color: $white;
+            transform: rotateZ(180deg);
+        }
+    }
+    #links{
+        display: flex;
+        position: absolute;
+        top: 0em;
+        left: 0em;
+        width: 100%;
+        background-color: $black;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        justify-content: space-evenly;
+    }
+}
+.links__nav-element, .links__nav-element--dropdown{
+    padding: 0.25em;
+}
+.links__nav-element a, .links__nav-element--dropdown a{
+    font-family: 'Orbitron';
+    font-size: 1.4em;
+    transition: 0.2s;
+}
+.links__nav-element a:hover, .links__nav-element--dropdown a:hover{
+    color: $primary;
+}
+.links__nav-subelement{
+    display: none;
+    padding: 0.2em;
+}
+.links__sub-menu-desc{
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background: #343434;
+    width: 197.967px;
+    height: 7em;
+    padding-left: 0;
+}
+.links__sub-menu-vehiculos{
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background: #343434;
+    width: 125.25px;
+    height: 18em;
+    padding-left: 0;
+}
+form{
+    padding: 4em;
+}
+.form-group, .form-check{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+footer{
+    padding: 2rem;
+    background-color: $dark;
+}
+
+/* Animaciones */
+@keyframes gallery{
+    0%{transform: translateX(0%)}
+    50%{transform: translateX(-90%)}
+    100%{transform: translateX(0%)}
+}
+
+/* Tablets */
+@media screen and (min-width: 600px){
+    body{
+        font-size: 18px;
+    }
+    #title{
+        font-size: 8.5em;
+    }
+    #video-section{
+        height: 34em;
+    }
+    .video, .carousel{
+        width: 100%;
+        height: 80%;
+    }
+    .form-check-input{
+        margin-right: 0.5em;
+    }
+    .member{
+        width: 43%;
+    }
+    #official-sites{
+        width: 100vw;
+    }
+}
+
+/* PC */
+@media screen and (min-width: 1024px){
+    body{
+        font-size: 20px;
+    }
+    header{
+        display: flex
+    }
+    h1{
+        margin-left: 0.1em;
+    }
+    h2{
+        margin-left: 0.75em;
+    }
+    h4{
+        font-size: 2vw;
+    }
+    h6{
+        width: 4em;
+    }
+    #menu-icon{
+        display: none;
+    }
+    #menu{
+        width: 100%;
+    }
+    #menu:hover #links{
+        width: 98%;
+        position: relative;
+        background-color: $primary;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    #links{
+        display: flex;
+        width: 98%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .links__nav-element, .links__nav-element--dropdown{
+        text-align: center;
+        font-size: 0.8em;
+        margin-left: 0.55em;
+        margin-right: 0.55em;
+    }
+    .links__nav-element a, .links__nav-element--dropdown a{
+        color: $secondary;
+        transition: all ease 0.2s;
+    }
+    .links__nav-element a:hover, .links__nav-element--dropdown a:hover{
+        color: $white;
+    }
+    .links__nav-element--dropdown:hover .links__sub-menu-desc{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .links__nav-element--dropdown:hover .links__sub-menu-vehiculos{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .links__nav-subelement{
+        display: inline-block;
+        padding: 0;
+    }
+    .links__nav-subelement a{
+        font-size: 1.1em;
+        color: $white;
+        font-family: 'Montserrat';
+    }
+    .links__nav-subelement a:hover{
+        color: $primary;
+    }
+    #title{
+        width: min-content;
+    }
+    #slogan{
+        text-align: left;
+    }
+    .video{
+        width: 50em;
+        height: 40em;
+    }
+    .carousel{
+        width: 50em;
+    }
+    #official-sites{
+        width: auto;
+    }
+    .official-img{
+        width: 8vw;
+    }
+    .member{
+        width: 21em;
+    }
+    #grid-locales, #grid-imports{
+        grid-template-columns: repeat(4, auto);
+    }
+    .grid__square, .grid__title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-check-input{
+        transform: scale(1);
+        margin-right: 0em;
+    }
+    form{
+        width: 70%;
+        margin: auto;
+    }
+}

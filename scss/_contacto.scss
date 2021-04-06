@@ -1,0 +1,21 @@
+/* contacto */
+#social{
+    width: 100%;
+    text-align: center;
+}
+.social__icon{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    transition: all ease 0.4s;
+}
+.social__icon:hover{
+    transform: rotate(360deg);
+}
+#ad{
+    transform: scale(1);
+    margin-right: 0.5em;
+}
+.btn-light{
+    margin-bottom: 0.5em;
+}
