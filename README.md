@@ -1,0 +1,1 @@
+Sitio web de Nicolás Domínguez, del curso Desarrollo Web de CoderHouse, camada 13665 (tutor: Guido Caruso). Hard Duty es una PyME ficticia ubicada en Córdoba, Argentina, que se dedica a la venta de vehículos pickup americanos.
