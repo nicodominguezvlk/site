@@ -25,6 +25,7 @@
   align-self: center; }
 
 .gallery__item {
+  display: none;
   width: 100%;
   height: 15em; }
   .gallery__item img {
@@ -37,7 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5em; }
+  margin-top: 2em; }
 
 .video {
   padding: 0.5em;
@@ -524,6 +525,8 @@ footer {
     width: min-content; }
   #slogan {
     text-align: left; }
+  .gallery__item {
+    display: block; }
   .video {
     width: 50em;
     height: 40em; }
