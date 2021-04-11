@@ -1,5 +1,5 @@
 /* Día */
-$day: 1;
+$day: 3;
 
 /* index */
 .plain-body{
@@ -59,6 +59,7 @@ $day: 1;
     background-color: $black;
     padding-top: 5em;
     padding-bottom: 5em;
+    width: 103%;
 }
 .carousel{
     margin-top: 1em;
@@ -74,7 +75,7 @@ $day: 1;
     align-content: center;
     justify-content: center;
     height: 90%;
-    width: 100vw;
+    width: 95vw;
     div{
         display: flex;
         align-items: center;
