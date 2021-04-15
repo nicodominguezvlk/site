@@ -240,9 +240,9 @@
   text-align: center; }
 
 .social__icon {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 1em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+  margin-bottom: 0.4em;
   transition: all ease 0.4s; }
 
 .social__icon:hover {
@@ -431,6 +431,9 @@ footer {
   padding: 2rem;
   background-color: #2C241A; }
 
+#footer-social {
+  text-align: center; }
+
 /* Animaciones */
 @keyframes gallery {
   0% {
@@ -532,11 +535,11 @@ footer {
     width: 50em;
     height: 40em; }
   .carousel {
-    width: 50em; }
+    width: 50vw; }
   #official-sites {
     width: auto; }
   .official-img {
-    width: 8vw; }
+    width: 7.5vw; }
   .member {
     width: 21em; }
   #grid-locales, #grid-imports {

@@ -188,6 +188,9 @@ footer{
     padding: 2rem;
     background-color: $dark;
 }
+#footer-social{
+    text-align: center;
+}
 
 /* Animaciones */
 @keyframes gallery{
@@ -318,13 +321,13 @@ footer{
         height: 40em;
     }
     .carousel{
-        width: 50em;
+        width: 50vw;
     }
     #official-sites{
         width: auto;
     }
     .official-img{
-        width: 8vw;
+        width: 7.5vw;
     }
     .member{
         width: 21em;
